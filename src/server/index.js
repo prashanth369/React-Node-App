@@ -1,14 +1,12 @@
-const express = require('express')
+import express from 'express'
+import routes from './routes/index.js'
 
-// import express from 'express'
 const app = express()
 
 const PORT = process.env.PORT || 8080
-app.get('/api/:number', (req, res) => {
-    const {number} = req.params
-    res.json({message: 'the request is success with num, or else something'})
-})
+
+app.use('/api', routes)
 
 app.listen(PORT, () => {
-    console.log(`Node server is listening to port: ${PORT}`)
+  console.log(`Node server is listening to port: ${PORT}`)
 })

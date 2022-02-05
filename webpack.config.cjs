@@ -1,14 +1,14 @@
 
-
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
+const API_PORT = process.env.PORT || 8080
 
 module.exports = {
   entry: ['babel-polyfill', './src/client/index.tsx'],
   output: {
     path: path.join(__dirname, 'dist'),
-    filename: 'main.js'
+    filename: 'main[hash].js'
   },
   module: {
     rules: [{
@@ -36,7 +36,7 @@ module.exports = {
     open: true,
     historyApiFallback: true,
     proxy: {
-      '/api': 'http://localhost:8080'
+      '/api': `http://localhost:${API_PORT}`
     }
   },
   plugins: [
