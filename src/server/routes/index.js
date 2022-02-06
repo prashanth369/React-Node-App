@@ -1,11 +1,7 @@
 import express from 'express'
-
+import {fetMedianPrimeNumber} from '../controllers/index.js'
 const routes = express.Router()
 
-routes.get('/:number', (req, res) => {
-  const { number } = req.params
-
-  res.send({ message: `the number received is: ${number}` })
-})
+routes.get('/:number', fetMedianPrimeNumber)
 
 export default routes
