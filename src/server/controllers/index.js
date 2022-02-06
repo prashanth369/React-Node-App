@@ -8,7 +8,7 @@ export const fetMedianPrimeNumber = (req, res) => {
     const allPrimeNumbers = fetchPrimeNumbers(number)
     const medianPrimeNumbers = getMedianPrimeNumbers(allPrimeNumbers)
 
-    response.data = JSON.stringify(medianPrimeNumbers)
+    response.data = medianPrimeNumbers
     response.status = 'success'
     response.message = 'Median Value is Successfully Fetched!'
   } catch (err) {
