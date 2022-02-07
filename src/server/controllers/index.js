@@ -10,7 +10,7 @@ export const fetMedianPrimeNumber = (req, res) => {
 
     response.data = medianPrimeNumbers
     response.status = 'success'
-    response.message = 'Median Value is Successfully Fetched!'
+    response.message = 'Median Value of the set of prime numbers less than input number is Successfully Fetched!'
   } catch (err) {
     response.status = 'error'
     response.message = err.message

@@ -1,4 +1,3 @@
-
 /**
  * Returns array of prime numbers less than number as an array.
  *

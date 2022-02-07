@@ -64,6 +64,7 @@ const App = () => {
             />
             <Button
               onClick={handleSubmit}
+              disabled={isLoading ? true : false}
               variant='contained'
               type='submit'
               className='submit-button'
