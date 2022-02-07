@@ -3,3 +3,9 @@ export interface PrimeNumberProps {
     status: string
     data?: number[]
 }
+
+export interface ResponseProps {
+    state: PrimeNumberProps
+    isLoading: boolean
+    error: string | null
+}

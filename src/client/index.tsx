@@ -1,6 +1,10 @@
 import React from 'react'
 import ReactDom from 'react-dom'
+import App from './components/App'
 
-const App = () => <div>Welcome to the configuration here </div>
-
-ReactDom.render(<App />, document.getElementById('root'))
+ReactDom.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById('root')
+)
