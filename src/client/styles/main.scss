@@ -31,9 +31,13 @@ code {
         padding-top:40px;
     }
     .submit-button {
+      margin-top:40px;
+      @media (min-width: 400px) {
         max-width: 200px;
         margin:auto;
         margin-top:40px;
+      }
+    
     }
   }
 

@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { Container, Box, Input, Button } from '@mui/material'
 import { PrimeNumberProps } from '../types'
 import fetch from '../util/fetch'
 import Response from './Response'
-import '../styles/main.scss'
 
 const App = () => {
   const [state, setState] = useState<PrimeNumberProps>()
@@ -32,14 +31,15 @@ const App = () => {
     } else {
       setError(null)
     }
-    setState(prevState => prevState && prevState.data && (prevState.data = undefined))
+    setState(
+      prevState => prevState && prevState.data && (prevState.data = undefined)
+    )
     setNumber(target.value)
   }
 
   const handleSubmit = (event: Event) => {
     event.preventDefault()
-    if(!error)
-        dataFetch()
+    if (!error) dataFetch()
   }
 
   return (
@@ -71,7 +71,7 @@ const App = () => {
             >
               Submit
             </Button>
-            <Response state={state} isLoading={isLoading} error={error}/>
+            <Response state={state} isLoading={isLoading} error={error} />
           </div>
         </Box>
       </Container>
