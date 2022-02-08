@@ -16,7 +16,7 @@ const Response = ({ state, isLoading, error }: ResponseProps) => {
 
   return responseText ? (
     <div className={`response-block ${error ? 'error' : ''}`}>
-      <label>{responseText}</label>
+      <span>{responseText}</span>
     </div>
   ) : null
 }

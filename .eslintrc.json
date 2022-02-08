@@ -13,12 +13,10 @@
       "semi": ["off", "never"],
       "react/jsx-filename-extension": "off",
       "import/prefer-default-export": "off",
-      "jsx-a11y/label-has-associated-control": ["error", {
-        "required": {
-          "some": ["nesting", "id"]
-        }
-      }],
-      "jsx-a11y/label-has-for": "off",
+      "no-restricted-globals": "off",
+      "no-return-assign": "off",
+      "no-plusplus": "off",
+      "no-param-reassign": "off",
       "indent": "off",
       "import/extensions": [
         "error",

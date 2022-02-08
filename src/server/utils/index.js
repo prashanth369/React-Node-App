@@ -5,7 +5,7 @@
  * @return {number[]} allPrimeNumbers all the prime numbers less than input number.
  */
 
-export const fetchPrimeNumbers = number => {
+export const fetchPrimeNumbers = (number) => {
   // If the input number is not a number or a negative number
   if (isNaN(number) || number < 0) {
     throw Error('Not a valid Number')
@@ -47,7 +47,7 @@ export const fetchPrimeNumbers = number => {
  * @param {number[]} primeNumbers The number to get median.
  * @return {number[]} medianPrimeNumbers the median values.
  */
-export const getMedianPrimeNumbers = primeNumbers => {
+export const getMedianPrimeNumbers = (primeNumbers) => {
   const medianPrimeNumbers = []
   if (!primeNumbers || primeNumbers.length === 0) {
     return []

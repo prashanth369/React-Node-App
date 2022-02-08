@@ -67,7 +67,7 @@ describe('Test for App Component', () => {
         const responseBlock: HTMLDivElement = container.querySelector(
           '.response-block'
         )
-        const responseLabel = responseBlock.querySelector('label')
+        const responseLabel = responseBlock.querySelector('span')
         expect(responseBlock).toBeInTheDocument()
         expect(responseLabel.textContent.replace(/\s\s+/g, ' ').trim()).toBe(
           'The Median Prime numbers of the set of Prime Numbers less than Entered Input are : 3, 5'
@@ -97,7 +97,7 @@ describe('Test for App Component', () => {
         const responseBlock: HTMLDivElement = container.querySelector(
           '.response-block'
         )
-        const responseLabel = responseBlock.querySelector('label')
+        const responseLabel = responseBlock.querySelector('span')
         expect(responseBlock).toBeInTheDocument()
         expect(responseLabel.textContent).toBe('Enter a valid input number')
       })
